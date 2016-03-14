@@ -18,6 +18,7 @@ module.exports = generators.Base.extend({
             default: this.appname
         },function(answers){
             this.log(answers.name);
+            this.config.set("projectName", answers.name);
             done();
         }.bind(this));
     }
