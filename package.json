@@ -2,7 +2,6 @@
   "name": "generator-node-angular",
   "version": "0.0.1",
   "description": "A Yeoman generator for using Node.js with Angular.js.",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +9,9 @@
     "type": "git",
     "url": "https://github.com/ly-wuyi/generator-node-angular.git"
   },
+  "files": [
+    "app"
+  ],
   "engines": {
     "node": " >=0.11"
   },
