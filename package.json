@@ -1,0 +1,28 @@
+{
+  "name": "generator-node-angular",
+  "version": "0.0.1",
+  "description": "A Yeoman generator for using Node.js with Angular.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ly-wuyi/generator-node-angular.git"
+  },
+  "engines": {
+    "node": " >=0.11"
+  },
+  "keywords": [
+    "generator",
+    "yeoman-generator",
+    "node.js",
+    "angular.js"
+  ],
+  "author": "yong.liu",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.0.1",
+    "yeoman-generator": "^0.22.5"
+  }
+}
