@@ -24,11 +24,27 @@ module.exports = generators.Base.extend({
                 name: "appDescription",
                 message: "Your project description",
                 default: "A node and angular module!"
+            },
+            {
+                type: "input",
+                name: "appKeywords",
+                message: "Your project keywords",
+                filter: function(item){
+                    if(typeof item == "string"){
+                        item = item.split(",");
+                    }
+                    return item.map(function(val){
+                        return val.trim();
+                    }).filter(function(val){
+                        return val.length>0;
+                    });
+                }
             }
         ];
         this.prompt(prompts, function(answers){
             this.appName = answers.appName;
             this.appDescription = answers.appDescription;
+            this.appKeywords = answers.appKeywords;
             done();
         }.bind(this));
     },
