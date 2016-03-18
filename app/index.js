@@ -62,5 +62,8 @@ module.exports = generators.Base.extend({
         this.authorEmail = authorEmail;
         this.repositoryUrl = repositoryUrl;
         this.template("package.json");
+        this.template("bower.json");
+        this.copy(".gitignore");
+        this.copy("Gruntfile.js");
     }
 });
