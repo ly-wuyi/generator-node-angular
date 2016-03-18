@@ -16,19 +16,19 @@ module.exports = generators.Base.extend({
             {
                 type: "input",
                 name: "appName",
-                message: "Your project name",
+                message: "Your project name?",
                 default: this.appname
             },
             {
                 type: "input",
                 name: "appDescription",
-                message: "Your project description",
+                message: "Your project description?",
                 default: "A node and angular module!"
             },
             {
                 type: "input",
                 name: "appKeywords",
-                message: "Your project keywords",
+                message: "Your project keywords?",
                 filter: function(item){
                     if(typeof item == "string"){
                         item = item.split(",");
@@ -39,6 +39,12 @@ module.exports = generators.Base.extend({
                         return val.length>0;
                     });
                 }
+            },
+            {
+                type: "confirm",
+                name: "skipInstall",
+                message: "Skip install dependencies?",
+                default: true
             }
         ];
         this.prompt(prompts, function(answers){
@@ -65,5 +71,11 @@ module.exports = generators.Base.extend({
         this.template("bower.json");
         this.copy(".gitignore");
         this.copy("Gruntfile.js");
+    },
+    install: function(){
+        this.installDependencies({
+            npm: true,
+            bower: true
+        });
     }
 });
