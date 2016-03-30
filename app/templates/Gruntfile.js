@@ -42,36 +42,13 @@ module.exports = function(grunt){
                     "client/{,**/}*.*"
                 ]
             },
-            foton_less:{
+            less:{
                 files:"./client/less/{,**/}*.less",
-                tasks: ["less:foton"]
-            },
-            cowin_less:{
-                files:"./client/less/{,**/}*.less",
-                tasks: ["less:cowin"]
+                tasks: ["less"]
             }
         },
         less: {
-            foton: {
-                options:{
-                    modifyVars: {
-                        theme: "foton"
-                    }
-                },
-                files: [{
-                    expand: true,
-                    cwd: "./client/less",
-                    src: ["style.less"],
-                    dest: "./client/css",
-                    ext: ".css"
-                }]
-            },
-            cowin: {
-                options:{
-                    modifyVars: {
-                        theme: "cowin"
-                    }
-                },
+            default: {
                 files: [{
                     expand: true,
                     cwd: "./client/less",
@@ -222,15 +199,7 @@ module.exports = function(grunt){
                     "dist/client",
                     "dist/client/images",
                     "dist/client/css"
-                ]/*,
-                blockReplacements: {
-                    js: function (block) {
-                        return '<script src="' + block.dest + '"></script>';
-                    },
-                    css: function(block){
-                        return '<link rel="stylesheet" href="' + block.dest + '">';
-                    }
-                }*/
+                ]
             }
         },
         auto_install: {
@@ -279,7 +248,7 @@ module.exports = function(grunt){
         }
     });
 
-    grunt.registerTask("package-foton",["clean:dist","less:foton","wiredep","useminPrepare","concat","copy:dist","cssmin","uglify",
+    grunt.registerTask("package-foton",["clean:dist","less","wiredep","useminPrepare","concat","copy:dist","cssmin","uglify",
         "filerev","usemin","auto_install","compress"]);
 
     grunt.registerTask("server",["connect:livereload","watch:livereload"]);

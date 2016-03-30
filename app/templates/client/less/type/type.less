@@ -1,0 +1,30 @@
+/*
+ *设置html样式
+ */
+
+@import "variable";
+@import "../util/util";
+
+html{
+  height: 100%;
+}
+
+body{
+  font-family: "微软雅黑";
+  background-color: #F2F3F7;
+  color: @text-color;
+  font-size: @font-size-base !important;
+  position: relative;
+
+  min-height: 790px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1270px;
+  }
+}
+
+a{
+  white-space: nowrap;
+}

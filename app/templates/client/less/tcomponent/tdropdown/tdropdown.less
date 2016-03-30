@@ -1,0 +1,100 @@
+@import "variable";
+
+.tdropdown{
+  position: relative;
+  display: inline;
+  margin-left: 2px;
+  button{
+    border: none;
+    background-color: transparent;
+  }
+  & .tdropdown-menu{
+    width: 370px;
+    height: 380px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    & .tdropdown-header{
+      font-weight: bold;
+      min-height: 16.43px;
+      padding: 3px 10px;
+      font-size: 12px;
+      line-height: 1.42857143;
+      color: #999;
+      border-bottom: 1px solid #e5e5e5;
+      button{
+        float: right;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        filter: alpha(opacity=20);
+        opacity: .2;
+        -webkit-appearance: none;
+        padding: 0;
+        cursor: pointer;
+        background: 0 0;
+        border: 0;
+        margin-top: -2px;
+      }
+    }
+    & .tdropdown-body{
+      padding: 10px 15px;
+      ul{
+        overflow-y: auto;
+        height:330px;
+        li{
+          padding-left: 72px;
+          padding-top: 2px;
+          font-size: 12px;
+          border-bottom: #c2c2c2 dotted 1px;
+          overflow: hidden;
+          &:hover{
+            background-color: #f5f5f5;
+          }
+          span{
+            float: left;
+            margin-left: -72px;
+            color: #666;
+            line-height: 24px;
+          }
+          a{
+            float: left;
+            padding-left: 6px;
+            line-height: 24px;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  ul,li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+.open{
+  & .tdropdown-menu{
+    display: block;
+  }
+}

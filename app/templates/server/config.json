@@ -1,0 +1,98 @@
+{
+  "production": {
+    "ip": "127.0.0.1",
+    "port": "3006",
+    "cdn": "",
+    "appinfo": {
+      "appkey": "9909756346",
+      "secretkey": "9fd4b70a1892bec00906d5dedf5ebea6"
+    },
+    "sessionTime": 7200000,
+    "cacheTime": 604800000,
+    "mongodb": {
+      "hostname": "172.16.24.103",
+      "port": "27017",
+      "user": "",
+      "password": "",
+      "name": "",
+      "schema": "Michelia"
+    },
+    "redis": {
+      "client": {},
+      "hostname": "10.101.27.184",
+      "port": 6379,
+      "socket": "",
+      "db": "2",
+      "pass": ""
+    },
+    "log": {
+      "appName": "manage-portal",
+      "path": "",
+      "name": "app.log"
+    }
+  },
+  "testing": {
+    "ip": "127.0.0.1",
+    "port": "3006",
+    "cdn": "",
+    "appinfo": {
+      "appkey": "9909756346",
+      "secretkey": "9fd4b70a1892bec00906d5dedf5ebea6"
+    },
+    "sessionTime" : 7200000,
+    "cacheTime": 604800000,
+    "mongodb": {
+      "hostname": "172.17.26.164",
+      "port":"27017",
+      "user": "",
+      "password": "",
+      "name": "",
+      "schema": "Michelia"
+    },
+    "redis": {
+      "client": {},
+      "hostname": "172.17.26.211",
+      "port": 6379,
+      "socket": "",
+      "db": "2",
+      "pass": "cowindev"
+    },
+    "log": {
+      "appName": "manage-portal",
+      "path": "",
+      "name": "app.log"
+    }
+  },
+  "development": {
+    "ip": "127.0.0.1",
+    "port": "3006",
+    "cdn": "",
+    "appinfo": {
+      "appkey": "9909756346",
+      "secretkey": "9fd4b70a1892bec00906d5dedf5ebea6"
+    },
+    "sessionTime" : 7200000,
+    "cacheTime": 0,
+    "mongodb": {
+      "hostname": "172.16.24.103",
+      "port":"27017",
+      "user": "",
+      "password": "",
+      "name": "",
+      "schema": "Michelia"
+    },
+    "redis": {
+      "client": {},
+      "hostname": "172.17.26.166",
+      "port": 6379,
+      "socket": "",
+      "db": "2",
+      "pass": ""
+    },
+    "log": {
+      "appName": "manage-portal",
+      "path": "",
+      "name": "app.log"
+    }
+  }
+}
