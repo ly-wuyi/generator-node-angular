@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row common-navigation-bar">
+        <div class="col-lg-2 col-md-2 navigation-title">
+            <div class="decoration">修改密码</div>
+        </div>
+        <div class="col-lg-7 col-md-7"></div>
+        <div class="col-lg-3 col-md-3 navigation-route">
+            主页&nbsp;>>&nbsp;修改密码
+        </div>
+    </div>
+    <div class="row common-condition">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-lg-5 col-md-5 control-label">用户名:<span class="common-must-span">*</span></label>
+                <div class="col-lg-3 col-md-3 ready-only">
+                    {{userName.userName1}}
+                </div>
+                <div class="col-lg-4 col-md-4"></div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-5 col-md-5 control-label">旧密码:<span class="common-must-span">*</span></label>
+                <div class="col-lg-3 col-md-3">
+                    <input type="password" class="form-control modify-inline-input col-lg-9 col-md-9" ng-model="modify.modifyPwdData.oldPassword">
+                </div>
+                <div class="col-lg-4 col-md-4 "></div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-5 col-md-5 control-label" id="newpassword">新密码:<span class="common-must-span">*</span></label>
+                <div class="col-lg-3 col-md-3">
+                    <input type="password" class="form-control modify-inline-input" ng-model="modify.modifyPwdData.newPassword">
+                </div>
+                <div class="col-lg-4 col-md-4"></div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-5 col-md-5 control-label">确认密码:<span class="common-must-span">*</span></label>
+                <div class="col-lg-3 col-md-3">
+                    <input type="password" class="form-control modify-inline-input" ng-model="modify.modifyPwdData.surePassword">
+                </div>
+                <div class="col-lg-4 col-md-4"></div>
+            </div>
+            <div class="form-group form-group-margin-top">
+                <div class="col-lg-5 col-md-5"></div>
+                <div class="col-lg-4 col-md-4">
+                    <a class="btn common-btn-ok btn-default" ng-click="modify.Search();">保存</a>
+                    <a class="btn common-btn-cancel btn-default" ng-click="backHome();">退出</a>
+                </div>
+                <div class="col-lg-4 col-md-4"></div>
+            </div>
+        </form>
+    </div>
+</div>

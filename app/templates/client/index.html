@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="<%= appName %>">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>主页</title>
+    <link rel="shortcut icon" href="images/index/cowin/favicon.ico">
+    <!-- build:css(./bower_components/) css/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
 
+    <!-- build:css(./client/) css/main.css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
+</head>
+<body ng-controller="indexCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-7">
+
+            </div>
+            <div class="col-lg-5 col-md-5">
+
+            </div>
+        </div>
+    </div>
+    <div class="loading-bg" ng-show="loadingShow"></div>
+    <div class="loading" ng-show="loadingShow">
+        <span></span>正在执行操作，请稍后...
+    </div>
+    <!-- build:js(./bower_components/) modules/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js(./client/) modules/main.js -->
+    <script src="modules/common/tcomponent.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
