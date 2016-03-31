@@ -71,6 +71,9 @@ module.exports = generators.Base.extend({
         this.template("bower.json");
         this.copy(".gitignore");
         this.copy("Gruntfile.js");
+        this.directory("server","server");
+        this.directory("client","client");
+        this.directory("test","test");
     },
     install: function(){
         this.installDependencies({
