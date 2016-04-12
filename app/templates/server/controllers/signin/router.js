@@ -2,7 +2,8 @@
  * Created by yong.liu on 2015/9/18.
  */
 var path = require("path"),
-    router = require(path.join(process.cwd(), "server/middleware/trouter")),
+    //router = require(path.join(process.cwd(), "server/middleware/trouter")),
+    router = require("koa-router")().prefix("/api"),
     signinService = require(path.join(process.cwd(), "server/service/signin/service"));
 
 router.post("/signin",function*(next){
