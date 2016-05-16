@@ -17,7 +17,7 @@ function startWork(){
     console.log('CLUSTER: Worker %d started', worker.id);
 }
 
-if(cluster.isMaster){
+if(cluster.isMaster && config.cluster){
     var numCPUs = require('os').cpus().length
     for(var i = 0; i<numCPUs; i++){
         var worker = cluster.fork();
