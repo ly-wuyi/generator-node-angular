@@ -31,9 +31,9 @@ app.use(compress({
 }));
 
 app.use(favicon());
-app.keys = ["manage-portal-session"];
+app.keys = [config.session.sessionKey];
 app.use(session({
-    key : "manage-portal-session",
+    key : config.session.sessionKey,
     store: redisStore({
         //client: config.redis.client,
         host: config.redis.hostname,

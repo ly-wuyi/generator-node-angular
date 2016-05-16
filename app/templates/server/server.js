@@ -45,5 +45,5 @@ if(cluster.isMaster){
     });
 }else{
     http.createServer(app.callback()).listen(config.port);
-    console.log("manage-portal is listening on http://" + config.ip + ":" + config.port);
+    console.log(config.pkg.name + " is listening on http://" + config.ip + ":" + config.port);
 }

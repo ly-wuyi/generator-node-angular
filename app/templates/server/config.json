@@ -7,7 +7,10 @@
       "appkey": "9909756346",
       "secretkey": "9fd4b70a1892bec00906d5dedf5ebea6"
     },
-    "sessionTime": 7200000,
+    "session": {
+      "sessionTime" : 7200000,
+      "sessionKey": "monitor-portal-session"
+    },
     "cacheTime": 604800000,
     "mongodb": {
       "hostname": "172.16.24.103",
@@ -39,7 +42,10 @@
       "appkey": "9909756346",
       "secretkey": "9fd4b70a1892bec00906d5dedf5ebea6"
     },
-    "sessionTime" : 7200000,
+    "session": {
+      "sessionTime" : 7200000,
+      "sessionKey": "monitor-portal-session"
+    },
     "cacheTime": 604800000,
     "mongodb": {
       "hostname": "172.17.26.164",
@@ -71,7 +77,10 @@
       "appkey": "9909756346",
       "secretkey": "9fd4b70a1892bec00906d5dedf5ebea6"
     },
-    "sessionTime" : 7200000,
+    "session": {
+      "sessionTime" : 7200000,
+      "sessionKey": "monitor-portal-session"
+    },
     "cacheTime": 0,
     "mongodb": {
       "hostname": "172.16.24.103",
